@@ -27,12 +27,10 @@ This folder contains a Postman Collection that includes all the currentAPS Secur
 
     ![Tutorial](img/tutorial.png)
 
-###  Use the script **GET third-party script for JWT Sign** to get the third-party JavaScript library to sign JWT assertion.
+###  JWT assertion signing
 
-- The CryptoJS in Postman doesn't support RS256 as sign algorithm, so we use a third-party script for JWT Sign.
-- It will fetch the script from https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/8.0.20/jsrsasign-all-min.js and save the content in an environment variable of Postman called `jsrsasign-js`.
-
-    ![ThirdPartyJS](img/3rd-party%20JS.png)
+- The CryptoJS in Postman doesn't support RS256 as sign algorithm, so the pre-request scripts that generate the JWT assertion include a small RS256 signer (`signRs256`) built on the sandbox's `crypto-js` and `BigInt`. No third-party script is downloaded or evaluated.
+- If an older version of this collection stored a `jsrsasign-js` environment variable, it is no longer used and can be deleted.
 
 ## Tips & Tricks
 
