@@ -1,0 +1,11 @@
+{
+  "name": "ssa-api-postman-collection-tests",
+  "private": true,
+  "description": "Tests for the Secure Service Account Postman collection. These tests fail while pre-request scripts write the service-account private key and JWT assertion to the console.",
+  "scripts": {
+    "test": "node --test tests/jwt-console-disclosure.test.js"
+  },
+  "devDependencies": {
+    "newman": "6.2.3"
+  }
+}
