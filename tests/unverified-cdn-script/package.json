@@ -1,0 +1,12 @@
+{
+  "name": "unverified-cdn-script-tests",
+  "private": true,
+  "description": "Executes the collection's JWT scripts in the Postman runtime shipped with the app that exported this collection. Fails while a substituted CDN body or environment value is evaluated with access to the service-account variables.",
+  "scripts": {
+    "test": "node --test cdn-script-execution.test.js"
+  },
+  "dependencies": {
+    "postman-collection": "5.0.2",
+    "postman-runtime": "7.44.1"
+  }
+}
